@@ -1,0 +1,69 @@
+@use 'config' as *;
+
+.contact {
+  padding: 20px 0 20px 20px;
+
+  @media (min-width: $breakpoint) {
+    width: 35%;
+  }
+
+  &__header {
+    padding-bottom: 20px;
+
+    &-text {
+      font-weight: normal;
+      font-size: 2rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $secondaryColor
+    }
+  }
+
+  &__address {
+    margin-right: 20px;
+    font-style: normal;
+
+    &-data {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+
+        &-label {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        &-value {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 1em;
+            height: 1em;
+            background-color: white;
+            margin-right: 5px;
+          }
+
+          &--email:before {
+            mask-image: url("/img/email.svg");
+          }
+
+          &--phone:before {
+            mask-image: url("/img/phone.svg");
+          }
+
+          &--address:before {
+            mask-image: url("/img/address.svg");
+          }
+        }
+      }
+    }
+  }
+}

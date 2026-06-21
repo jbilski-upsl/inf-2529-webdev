@@ -1,0 +1,81 @@
+@use './config.scss' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+  font-family: $mainFont;
+  font-size: 87.5%;
+  color: $primaryColor;
+  background-color: $secondaryColor;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerFont;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  @media (min-width: $breakpoint) {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+section:nth-child(even) {
+  color: $secondaryColor;
+  background: $primaryColor;
+
+  a {
+    color: $secondaryColor;
+  }
+}
+
+section:nth-child(odd) {
+  color: $primaryColor;
+  background: $secondaryColor;
+
+  a {
+    color: $secondaryColor;
+  }
+}
+
+main {
+  @media (min-width: $breakpoint) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+#work-experience {
+  @media (min-width: $breakpoint) {
+    width: 65%;
+  }
+}
+
+#education {
+  @media (min-width: $breakpoint) {
+    width: 35%;
+  }
+}
+
+#skills {
+  @media (min-width: $breakpoint) {
+    width: 35%;
+  }
+}

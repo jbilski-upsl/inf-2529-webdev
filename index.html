@@ -6,51 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="// TODO: treść"/>
     <title>Curriculum Vitae</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/src/scss/main.scss"/>
 </head>
 
 <body>
 <header>
-    <h1>Curriculum Vitae</h1>
+    <h1><a href="/" title="Go back home">Curriculum Vitae</a></h1>
     <nav>
-        <ul>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#work-experience">Work experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
+        <button id="toggle-menu">Menu</button>
+        <ul id="menu">
+            <li><a href="#contact" title="Go to contact section">Contact</a></li>
+            <li><a href="#work-experience" title="Go to work epxerience section">Work experience</a></li>
+            <li><a href="#education" title="Go to education section">Education</a></li>
+            <li><a href="#skills" title="Go to skills section">Skills</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <header>
-        <h1>Eden The Cat</h1>
-        <img src="/img/profile.jpeg" alt="Profile photo of Eden The Cat"/>
-        <p>// TODO: headline</p>
+    <header class="profile">
+        <h1 class="profile__name">Eden The Cat</h1>
+        <picture class="profile__image">
+            <source srcset="/img/profile.webp, /img/profile@2x.webp 2x"/>
+            <img width="300" height="300" src="/img/profile.jpg"
+                 alt="Profile photo of Eden The Cat"/>
+        </picture>
+        <p class="profile__description">// TODO: headline</p>
     </header>
 
-    <section id="contact">
-        <header>
-            <h1>Contact</h1>
+    <section id="contact" class="contact">
+        <header class="contact__header">
+            <h1 class="contact__header-text">Contact</h1>
         </header>
 
-        <address>
-            <ul>
-                <li>
-                    <label for="make-a-call">Phone</label>
-                    <a href="tel:+48509382566" id="make-a-call" title="Make a call">
+        <address class="contact__address">
+            <ul class="contact__address-data">
+                <li class="contact__address-data-item">
+                    <label for="make-a-call" class="contact__address-data-item-label">
+                        Phone
+                    </label>
+                    <a href="tel:+48509382566" id="make-a-call" title="Make a call"
+                       class="contact__address-data-item-value contact__address-data-item-value--phone">
                         +48 509 382 566
                     </a>
                 </li>
-                <li>
-                    <label for="send-an-email">E-mail</label>
-                    <a href="mailto:jakub.bilski@upsl.edu.pl" id="send-an-email" title="Send an e-mail">
+                <li class="contact__address-data-item">
+                    <label for="send-an-email" class="contact__address-data-item-label">E-mail</label>
+                    <a href="mailto:jakub.bilski@upsl.edu.pl" id="send-an-email" title="Send an e-mail"
+                       class="contact__address-data-item-value contact__address-data-item-value--email">
                         jakub.bilski@upsl.edu.pl
                     </a>
                 </li>
-                <li>
-                    <label for="see-on-map">Address</label>
+                <li class="contact__address-data-item">
+                    <label for="see-on-map" class="contact__address-data-item-label">Address</label>
                     <a href="https://maps.app.goo.gl/VKsK28jJbteNjBZ1A" id="see-on-map" target="_blank"
-                       title="See on map">
+                       title="See on map"
+                       class="contact__address-data-item-value contact__address-data-item-value--address">
                         ul. Boh. Westerplatte 64, 76-200 Słupsk
                     </a>
                 </li>
@@ -144,7 +159,7 @@
 </main>
 
 <footer>
-    <p>I allow to use enclosed personal data for recruitment purposes till 2026-06-30</p>
+    <p>I allow using enclosed personal data for recruitment purposes till 2026-06-30</p>
     <p>&copy; Jakub Bilski</p>
 </footer>
 
